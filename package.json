@@ -1,0 +1,20 @@
+{
+  "name": "record-interaction-for-html",
+  "version": "0.1.0",
+  "description": "Record interaction for html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matmanjs/record-interaction-for-html.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matmanjs/record-interaction-for-html/issues"
+  },
+  "homepage": "https://github.com/matmanjs/record-interaction-for-html#readme"
+}
