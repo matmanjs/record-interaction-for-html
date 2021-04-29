@@ -56,13 +56,16 @@ export class EventRecorder {
         document.removeEventListener('readystatechange', onReadyStateChange);
       }
     };
+
     document.addEventListener('readystatechange', onReadyStateChange);
   }
 
   startRecord() {
     this.eventCollections.forEach((collection) => {
+      console.log('---startRecord--', collection);
       collection.attach();
     });
+
     this.toggleTouchMode();
   }
 

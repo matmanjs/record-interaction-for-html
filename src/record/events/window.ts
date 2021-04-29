@@ -9,9 +9,20 @@ export class WindowEvents extends EventCollection {
   }
 
   onResize(event: UIEvent) {
-    if (!event.isTrusted) return;
-    if (event.cancelable) return;
-    if (isWindowSizeNotChanged()) return;
+    console.log('===onResize===', event);
+
+    if (!event.isTrusted) {
+      return;
+    }
+
+    if (event.cancelable) {
+      return;
+    }
+
+    if (isWindowSizeNotChanged()) {
+      return;
+    }
+
     cacheWindowSize();
 
     recordState.recordCommand({
