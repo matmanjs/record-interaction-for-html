@@ -9,6 +9,14 @@ import { windowEvents } from './events/window';
 
 const defaultEvents = [inputEvents, keyboardEvents, mouseEvents, windowEvents];
 
+export const EVENT_NAME = {
+  INIT: 'INIT',
+  DESTROY: 'DESTROY',
+  MOUSE_MOVE: 'MOUSE_MOVE',
+  BLUR: 'BLUR',
+  CLICK: 'CLICK'
+};
+
 export class EventRecorder {
   eventCollections = new Set<EventCollection>(defaultEvents);
   mobileTouchMode = false;
@@ -21,8 +29,8 @@ export class EventRecorder {
     this.mobileTouchMode = !!mobileTouchMode;
   }
 
-  async init() {
-    const onReady = async () => {
+  init() {
+    const onReady = () => {
       console.log('获取录制状态');
       console.time('getAllRecordState');
       console.timeEnd('getAllRecordState');
