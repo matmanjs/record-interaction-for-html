@@ -1,1 +1,5 @@
-export default 'ddd';
+import { EventRecorder } from './record/EventRecorder';
+
+export {
+  EventRecorder
+};
